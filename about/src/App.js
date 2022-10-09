@@ -9,8 +9,8 @@ const routes = [...localRoutes, ...mainRoutes]
 
 export const App = () => (
   <Router>
-    <div style={{ background: 'rgba(43, 192, 219, 0.3)' }}>
-      <h1>This is the Host!</h1>
+    <div>
+      <h1 style={{ background: 'red' }}>This is About App !!!</h1>
       <React.Suspense fallback={<div>Loading...</div>}>
         <Navigation />
       </React.Suspense>

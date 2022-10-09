@@ -10,7 +10,7 @@ export const App = () => {
   return (
     <BrowserRouter>
       <div>
-        Hello from the other side 2
+        <h1 style={{ background: 'yellow' }}>This is Home App !!!</h1>
         <Navigation />
         <React.Suspense fallback={<div>Loading...</div>}>
           <Routes>
