@@ -36,10 +36,10 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'Remote',
+      name: 'HomeApp',
       filename: 'moduleEntry.js',
       remotes: {
-        Host: 'Host@http://localhost:3000/moduleEntry.js',
+        AboutApp: 'AboutApp@http://localhost:3000/moduleEntry.js',
       },
       exposes: {
         './App': './src/App',

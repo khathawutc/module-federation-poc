@@ -31,10 +31,10 @@ module.exports = {
       template: './public/index.html',
     }),
     new ModuleFederationPlugin({
-      name: 'Host',
+      name: 'AboutApp',
       filename: 'moduleEntry.js',
       remotes: {
-        Remote: `Remote@http://localhost:4000/moduleEntry.js`,
+        HomeApp: `HomeApp@http://localhost:4000/moduleEntry.js`,
       },
       exposes: {
         './routes': './src/routes',

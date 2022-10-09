@@ -1,24 +1,11 @@
 import React from 'react'
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom'
 import localRoutes from './routes'
-import mainRoutes from 'Remote/MainRoutes'
+import mainRoutes from 'HomeApp/MainRoutes'
 
-const RemoteApp = React.lazy(() => import('Remote/App'))
-const Navigation = React.lazy(() => import('Remote/Navigation'))
+const Navigation = React.lazy(() => import('HomeApp/Navigation'))
 
 const routes = [...localRoutes, ...mainRoutes]
-
-const RemoteWrapper = ({ children }) => (
-  <div
-    style={{
-      border: '1px solid red',
-      background: 'white',
-    }}
-  >
-    {/* <ErrorBoundary>{children}</ErrorBoundary> */}
-    {children}
-  </div>
-)
 
 export const App = () => (
   <Router>
@@ -39,16 +26,6 @@ export const App = () => (
           ))}
         </Routes>
       </React.Suspense>
-      {/* <h2>Remote App:</h2>
-    <RemoteWrapper>
-      <RemoteApp />
-    </RemoteWrapper>
-    <h2>Remote Button:</h2>
-    <RemoteWrapper>
-      <RemoteButton />
-    </RemoteWrapper>
-    <br />
-    <a href="http://localhost:4000">Link to Remote App</a> */}
     </div>
   </Router>
 )

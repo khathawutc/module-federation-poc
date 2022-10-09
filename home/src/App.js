@@ -2,7 +2,7 @@ import React from 'react'
 import { Route, Routes, BrowserRouter } from 'react-router-dom'
 import Navigation from './Navigation'
 import localRoutes from './routes'
-import remoteRoutes from 'Host/routes'
+import remoteRoutes from 'AboutApp/routes'
 
 const routes = [...localRoutes, ...remoteRoutes]
 
